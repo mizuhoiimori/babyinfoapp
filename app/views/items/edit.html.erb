@@ -1,0 +1,12 @@
+<%= render 'layouts/flash_messages' %>
+
+<div class='container'>
+  <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+  		<h1>投稿内容編集</h1>
+  		<%= render 'layouts/flash_messages', obj: @item %>
+  		<%= render 'form', item: @item %>
+  		<%= link_to '投稿内容詳細', item_path(@item), class: "item_#{@item.id}" %> |
+  		<%= link_to '一覧に戻る', items_path, class: "back" %>
+  </div>
+</div>

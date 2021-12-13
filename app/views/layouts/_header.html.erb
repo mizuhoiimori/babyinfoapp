@@ -1,0 +1,28 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <%= link_to image_tag('logo_white.jpg', size:"120x100"), '/' %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="search ml-auto">
+          <%= render 'layouts/search' %>
+        </div>
+        <ul class="navbar-nav ml-auto">
+        <% if user_signed_in? %>
+          <li><%= link_to ' マイページ',user_path(current_user),class: 'fas fa-home nav-link text-light' %></li>
+          <li><%= link_to ' ユーザー情報',users_path,class: 'fas fa-user nav-link text-light' %></li>
+          <li><%= link_to ' アイテム一覧',items_path ,class: 'fas fa-shapes nav-link text-light'%></li>
+          <li><%= link_to ' ログアウト', destroy_user_session_path, method: :delete,class: 'fas fa-sign-out-alt nav-link text-light' %></li>
+        <% else %>
+          <li><%= link_to ' トップページ',root_path,class: 'fas fa-home nav-link text-light' %></li>
+          <li><%= link_to ' BabyInfoとは？',home_about_path,class: 'fas fa-link nav-link text-light' %></li>
+          <li><%= link_to ' アカウント登録', new_user_registration_path,class: 'fas fa-user-plus nav-link text-light' %></li>
+          <li><%= link_to ' ログイン', new_user_session_path ,class: 'fas fa-sign-in-alt nav-link text-light'%></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
