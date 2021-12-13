@@ -17,6 +17,8 @@ before_action :ensure_current_user,{only: [:edit, :update, :destroy]}
 
   def create
     @item = Item.new(item_params)
+    @item.user_id = current_user.id
+    @user = current_user
     if @item.save
       redirect_to item_path(@item), notice: "投稿に成功しました！"
     else
