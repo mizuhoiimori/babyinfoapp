@@ -36,7 +36,7 @@
               <%= attachment_image_tag(record.user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %>
             </td>
             <td>
-                <%= link_to record.title, item_path(@records) %>
+                <%= link_to record.name, item_path(@records) %>
             </td>
             <td>
                 <%= record.body %>

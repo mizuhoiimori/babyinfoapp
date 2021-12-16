@@ -6,7 +6,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string :category
       t.integer :price
       t.string :store
-      t.float :evaluation
+      t.float :evaluation, default:0
       t.text :body
       t.string :item_image_id
 

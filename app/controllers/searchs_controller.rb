@@ -17,9 +17,9 @@ class SearchsController < ApplicationController
       end
     elsif model == "item"
       if method == "perfect"
-        Item.where(title: content)
+        Item.where(name: content)
       else
-        Item.where("title LIKE ?", "%"+content+"%")
+        Item.where("name LIKE ?", "%"+content+"%")
       end
     end
   end

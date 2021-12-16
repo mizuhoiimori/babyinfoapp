@@ -1,4 +1,6 @@
-<div class='container px-5 px-sm-0'>
+<%= render 'layouts/flash_message', obj: @user %>
+
+<div class='container-fluid'>
   <div class='row'>
     <div class='col-md-4'>
       <h2>ユーザー情報</h2>
@@ -16,10 +18,12 @@
           <th>購入店</th>
           <th>星評価</th>
           <th>レビュー</th>
+          <th></th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
-        <% @allitems.each do |item| %>
+        <% @items.each do |item| %>
           <tr>
             <td><%= link_to item_path(item) do %>
                 <%= attachment_image_tag(item, :item_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %>
@@ -45,6 +49,10 @@
               </div>
             </td>
             <td><%= item.body %></td>
+            <td id="favorites_<%= item.id %>">
+            <%= render 'favorites/favorite', item: item %>
+            </td>
+            <td>コメント数：<%= item.item_comments.count %></td>
           </tr>
         <% end %>
       </tbody>
