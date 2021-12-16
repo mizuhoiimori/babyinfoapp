@@ -14,7 +14,7 @@
           <% @records.each do |record| %>
             <tr>
               <td><%= attachment_image_tag(record, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %></td>
-              <td><%= record.name %></td>
+              <td><%=record.name %></td>
               <td><%= record.introduction %></td>
           <% end %>
         </tbody>
