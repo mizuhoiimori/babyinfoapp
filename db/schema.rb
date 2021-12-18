@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2021_12_13_060229) do
     t.string "category"
     t.integer "price"
     t.string "store"
-    t.float "evaluation"
+    t.float "evaluation", default: 0.0
     t.text "body"
     t.string "item_image_id"
     t.datetime "created_at", null: false

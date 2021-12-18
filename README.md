@@ -1,4 +1,4 @@
-# Baby Info
+# Baby Info app
 
 ## サイト概要
 
