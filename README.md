@@ -45,9 +45,12 @@ SNSサービスの基本機能に検索機能や評価機能を実装
 - 言語：HTML,CSS,JavaScript,Ruby,SQL
 - フレームワーク：Ruby on Rails
 - JS ライブラリ：jQuery
-- IDE：Cloud9 
+- IDE：Cloud9
 
 ## 使用素材
 
-- 検討中：外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名と URL を明記します
-- 検討中：使用しない場合は、使用素材の項目を README から削除します
+- 写真AC：https://www.photo-ac.com/
+- アカチャンホンポ公式ネット通販：https://akachan.omni7.jp/top
+- トイザらスオンラインストア：https://www.toysrus.co.jp/
+- IKEAオンラインストア【公式】：https://www.ikea.com/jp/ja/
+- 西松屋：https://www.24028.jp/

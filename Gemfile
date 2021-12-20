@@ -70,8 +70,10 @@ gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.13'
 gem 'bootstrap', '~> 4.5'
 gem 'devise-bootstrap-views'
-gem 'pry-rails'
 gem 'dotenv-rails'
 group :production do
   gem 'mysql2'
+end
+group :development, :test do
+  gem 'pry-rails'
 end

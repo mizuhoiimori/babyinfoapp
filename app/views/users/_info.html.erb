@@ -1,29 +1,29 @@
 <table class='table'>
   <tr>
     <th></th>
-    <th><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: "jpeg", fallback: "no-image-icon.jpg" %></th>
+    <td><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: "jpeg", fallback: "no-image-icon.jpg" %></td>
   </tr>
   <tr>
 	  <th>名前</th>
-	  <th><%= user.name %></th>
+	  <td><%= user.name %></td>
   </tr>
   <tr>
 	  <th>自己紹介</th>
-	  <th><%= user.introduction %></th>
+	  <td><%= user.introduction %></td>
   </tr>
   <tr>
     <th>フォロー中</th>
-    <th><%= link_to user_followings_path(user) do %>
+    <td><%= link_to user_followings_path(user) do %>
         <%=  user.followings.count %>
         <% end %>
-    </th>
+    </td>
   </tr>
   <tr>
     <th>フォロワー</th>
-    <th><%= link_to user_followers_path(user) do %>
+    <td><%= link_to user_followers_path(user) do %>
         <%=  user.followers.count %>
         <% end %>
-    </th>
+    </td>
   </tr>
   </table>
   <div>
