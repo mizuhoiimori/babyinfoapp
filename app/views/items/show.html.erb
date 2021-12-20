@@ -10,10 +10,12 @@
       <h2>アイテム詳細</h2>
       <table class ='table'>
         <tr>
-          <%= link_to user_path(@item.user) do %>
+          <th>ユーザー名</th>
+          <td><%= link_to user_path(@item.user) do %>
+          <%= @item.user.name %>
           <%= attachment_image_tag @item.user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg" %>
-          ユーザー名：  <%= @item.user.name %>
           <% end %>
+          </td>
         </tr>
         <tr>
           <th>アイテム画像</th>
@@ -67,31 +69,21 @@
           <% if @user == current_user %>
             <td><%= link_to '削除', item_path(@item), method: :delete, data: { confirm: '本当に削除しますか？' }, class: "btn btn-sm btn-danger destroy_item_#{@item.id}"%></td>
           <% else %>
+            <td></td>
           <% end %>
             <th id="favorites_<%= @item.id %>">
               <%= render 'favorites/favorite', item: @item %></th>
             <th>コメント数：<%= @item.item_comments.count %></th>
         </tr>
-        </table>
-        <table class='table'>
-  		  <% @item.item_comments.each do |item_comment| %>
-    		  <tr>
-    		    <td><%= link_to user_path(item_comment.user) do %>
-              <%= attachment_image_tag(item_comment.user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %><br>
-              <%= item_comment.user.name %>
-              <% end %>
-            </td>
-            <td><%= item_comment.comment %></td>
-              <% if item_comment.user == current_user %>
-              <td><%= link_to '削除', item_item_comments_path(@item.id, @item_comment), method: :delete, class: "btn btn-sm btn-danger destroy_item_#{@item.id}"%></td>
-              <% end %>
-          </tr>
-        <% end %>
+        </table></br>
+        <h2>コメント</h2>
+        <table id="item_comments" class='table'>
+          <%= render "comments", item: @item %>
         </table>
         <table class='table'>
         <%= form_with(model:[@item, @item_comment], local:true) do |f| %>
           <div class="form-group">
-            <%= f.label :comment %>
+            <%= f.label :comment,"投稿" %>
             <%= f.text_area :comment, class: 'form-control item_title' %>
           </div>
           <div class="form-group">
