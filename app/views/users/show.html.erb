@@ -18,8 +18,8 @@
           <th>購入店</th>
           <th>星評価</th>
           <th>レビュー</th>
-          <th></th>
-          <th></th>
+          <th>❤︎</th>
+          <th>コメント</th>
         </tr>
       </thead>
       <tbody>
@@ -33,7 +33,7 @@
             <td><%= item.category %></td>
             <td><%= item.price %></td>
             <td><%= item.store %></td>
-            <td>
+            <th>
               <div id="star-rate-<%= item.id %>">
               <script>
                 $('#star-rate-<%= item.id %>').raty({
@@ -47,12 +47,12 @@
                 });
               </script>
               </div>
-            </td>
+            </th>
             <td><%= item.body %></td>
-            <td id="favorites_<%= item.id %>">
+            <th id="favorites_<%= item.id %>">
             <%= render 'favorites/favorite', item: item %>
-            </td>
-            <td>コメント数：<%= item.item_comments.count %></td>
+            </th>
+            <td><%= item.item_comments.count %>件</td>
           </tr>
         <% end %>
       </tbody>
