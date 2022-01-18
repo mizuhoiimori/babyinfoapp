@@ -72,7 +72,7 @@ gem 'bootstrap', '~> 4.5'
 gem 'devise-bootstrap-views'
 gem 'dotenv-rails'
 group :production do
-  gem 'mysql2'
+  gem 'mysql2', '~>0.5.3'
 end
 group :development, :test do
   gem 'pry-rails'
