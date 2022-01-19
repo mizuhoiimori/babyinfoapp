@@ -55,5 +55,4 @@
 - 写真AC：https://www.photo-ac.com/
 - アカチャンホンポ公式ネット通販：https://akachan.omni7.jp/top
 - トイザらスオンラインストア：https://www.toysrus.co.jp/
-- IKEAオンラインストア【公式】：https://www.ikea.com/jp/ja/
 - 西松屋：https://www.24028.jp/
