@@ -71,6 +71,7 @@ gem 'font-awesome-sass', '~> 5.13'
 gem 'bootstrap', '~> 4.5'
 gem 'devise-bootstrap-views'
 gem 'dotenv-rails'
+gem 'ransack'
 group :production do
   gem 'mysql2', '~>0.5.3'
 end
