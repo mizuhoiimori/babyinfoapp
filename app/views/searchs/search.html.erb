@@ -47,11 +47,11 @@
     <!--  </table>-->
     <!--<% end %>-->
     <h1>検索結果</h1>
-      <% if @results.length != 0 %>
-        <% @resource.each do |result| %>
-          <%= result.title %>
-          <%= result.text %>
-          <%= result.username %>
+      <% if @search.present? %>
+        <% @items.each do |item| %>
+          <%= item.name %>
+          <%= item.text %>
+          <%= item.username %>
         <% end %>
       <% else %>
         検索結果はありません

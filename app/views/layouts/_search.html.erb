@@ -2,8 +2,8 @@
   <div class='row my-2'>
     <div class='mx-auto'>
     <% if user_signed_in? %>
-      <%= search_form_for @q, url: search_path do |f| %>
-        <%= f.text_field :title_or_body_cont, class: 'form-control', placeholder: '検索ワード' %>
+      <%= search_form_for@search, url: search_path do |f| %>
+        <%= f.search_field :name_cont, class: 'search', placeholder: '検索ワード' %>
         <div class="input-group-append">
           <%= f.submit '検索', class: 'btn btn-primary' %>
         </div>
