@@ -2,18 +2,18 @@
   <div class='row my-2'>
     <div class='mx-auto'>
     <% if user_signed_in? %>
-      <%= search_form_for@search, url: search_path do |f| %>
-        <%= f.search_field :name_cont, class: 'search', placeholder: '検索ワード' %>
-        <div class="input-group-append">
-          <%= f.submit '検索', class: 'btn btn-primary' %>
-        </div>
-      <% end %>
-      <!--<%= form_tag(search_path, method: :get) do %>-->
-      <!--  <%= text_field_tag "content" %>-->
-      <!--  <%= select_tag "model", options_for_select({"ユーザー" => "user", "アイテム" => "item"}) %>-->
-      <!--  <%= select_tag "method", options_for_select({"完全一致" => "perfect", "部分一致" => "partial"}) %>-->
-      <!--  <%= submit_tag "検索", class:"submit" %>-->
+      <!--<%= search_form_for@search, url: search_path do |f| %>-->
+      <!--  <%= f.search_field :name_cont, class: 'search', placeholder: '検索ワード' %>-->
+      <!--  <div class="input-group-append">-->
+      <!--    <%= f.submit '検索', class: 'btn btn-primary' %>-->
+      <!--  </div>-->
       <!--<% end %>-->
+      <%= form_tag(search_path, method: :get) do %>
+        <%= text_field_tag "content" %>
+        <%= select_tag "model", options_for_select({"ユーザー" => "user", "アイテム" => "item"}) %>
+        <%= select_tag "method", options_for_select({"完全一致" => "perfect", "部分一致" => "partial"}) %>
+        <%= submit_tag "検索", class:"submit" %>
+      <% end %>
     <% end %>
     </div>
   </div>
