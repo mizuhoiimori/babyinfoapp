@@ -53,6 +53,3 @@
 ## 使用素材
 
 - 写真AC：https://www.photo-ac.com/
-- アカチャンホンポ公式ネット通販：https://akachan.omni7.jp/top
-- トイザらスオンラインストア：https://www.toysrus.co.jp/
-- 西松屋：https://www.24028.jp/
