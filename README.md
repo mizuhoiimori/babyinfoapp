@@ -38,9 +38,9 @@
 
 <https://docs.google.com/spreadsheets/d/1bOjtpAV9nIZObUltvmcu5xgQzQBcBoHsWJtEkqqz4ro/edit?usp=sharing>
 
-## サイトURL
+<!--## サイトURL-->
 
-<http://babyinfo.site/>
+<!--<http://babyinfo.site/>-->
 
 ## 開発環境
 
